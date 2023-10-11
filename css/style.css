@@ -1,0 +1,161 @@
+/* Seus estilos anteriores */
+body {
+    margin: 0px;
+}
+
+
+
+.horizontal-bar {
+    width: 100%;
+    background-color: #000; /* Cor de fundo das barras */
+}
+
+.navbar {
+    height: 64px;
+    background-color: #0D0D0D !important;
+    position: relative;
+    z-index: 0; 
+}
+
+.bar-1 {
+    height: 40px;
+    background-color: #202020;
+}
+/* Estilos para o texto na primeira barra */
+.horizontal-bar.bar-1 span {
+    color: #fff; /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte */
+    padding: 1px; /* Espaçamento interno para o texto */
+}
+
+.bar-2 {
+    height: 56px;
+    background-color: #0D0D0D;
+   
+}
+
+/* Estilos para a sub-barra */
+/* Estilos para a barra 2 */
+.horizontal-bar.bar-2 {
+    height: 56px;
+    background-color: #0D0D0D;
+    position: relative; /* Defina a posição relativa na barra 2 */
+}
+
+/* Estilos para a sub-barra */
+.horizontal-bar.bar-2 .sub-bar {
+    height: 56px;
+    width: 100px;
+    background-color: #202020; /* Cor de fundo da sub-barra */
+    position: absolute; /* Defina a posição absoluta na sub-barra */
+    left: 50%; /* Centralize horizontalmente na barra 2 */
+    transform: translateX(-50%); /* Centralize horizontalmente na barra 2 */
+}
+
+
+.bar-3 {
+    /* Altura padrão das barras (você pode ajustar essa altura) */
+    height: 120px; /* Por exemplo, 20px */
+    background-color: #202020;
+    position: relative;
+}
+
+.logo {
+    width: 170px;
+    position: absolute;
+    top: 40%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Centraliza a logo no meio da barra */
+    z-index: 1001;
+}
+
+/* Estilos para o menu hamburguer */
+.navbar-top {
+    z-index: 1000; /* Defina um z-index maior para a barra de navegação */
+}
+
+
+  /* Estilos para o menu deslizante */
+/* Estilos para o menu deslizante com transparência de fundo */
+.offcanvas {
+    width: 250px !important; /* Largura do menu deslizante */
+    background-color: rgba(51, 51, 51, 0.7); /* Cor de fundo com transparência (alpha de 0.7) */
+    color: #fff; /* Cor do texto do menu */
+}
+
+  
+  /* Estilos para os itens do menu */
+  .offcanvas-body ul.navbar-nav li.nav-item a.nav-link {
+    color: #fff; /* Cor do texto dos itens do menu */
+  }
+  
+  /* Estilos para os itens do menu deslizante */
+.offcanvas-body ul.navbar-nav {
+    padding: 0; /* Remove o espaçamento interno padrão */
+  }
+  
+  .offcanvas-body ul.navbar-nav li.nav-item {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Remove os marcadores de lista */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    margin-bottom: 10px; /* Espaçamento entre os itens do menu */
+  }
+  
+  .offcanvas-body ul.navbar-nav li.nav-item a.nav-link {
+    color: #F2E205; /* Cor do texto dos itens do menu */
+    font-size: 18px; /* Tamanho da fonte dos itens do menu */
+    text-decoration: none; /* Remove sublinhado de links */
+    display: block; /* Torna os links em bloco para ocupar a largura total */
+    padding: 10px; /* Espaçamento interno dos links */
+    transition: background-color 0.3s; /* Efeito de transição de cor de fundo ao passar o mouse */
+  }
+  
+  .offcanvas-body ul.navbar-nav li.nav-item a.nav-link:hover {
+    background-color: #555; /* Cor de fundo ao passar o mouse */
+  }
+  
+  /* Estilos para o título do menu */
+  .offcanvas-header h5.offcanvas-title {
+    color: #fff; /* Cor do título do menu */
+    text-align: center; /* Centraliza o título horizontalmente */
+    margin-bottom: 20px; /* Espaçamento entre o título e os itens do menu */
+  }
+
+.offcanvas-title {
+    color: #F2E205 !important;
+    text-decoration: underline;
+}
+
+.btn-close {
+    background-color: #F2E205 !important;
+    position: absolute;
+    top: 25px; /* Ajuste a posição vertical conforme necessário */
+    left: 25px; /* Ajuste a posição horizontal conforme necessário */
+    cursor: pointer; 
+}
+
+@media (max-width: 800px) {
+    .logo {
+        width: 120px;
+        z-index: 100;
+    }
+    .bar-1 {
+        display: none;
+    }
+    .bar-2 {
+        display: none;
+    }
+    .bar-3 {
+        display: none;
+    }
+}
+
+.menu-open-button::before {
+    content: "menu_open"; /* Define o conteúdo como "menu_open" para exibir o ícone */
+    position: absolute;
+    top: 10px; /* Ajuste a posição vertical conforme necessário */
+    left: 10px; /* Ajuste a posição horizontal conforme necessário */
+    cursor: pointer; /* Adicione um cursor de mão para indicar que é clicável */
+}
+
